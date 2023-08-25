@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use App\Services\DocumentService;
 use App\Services\MetasService;
 use App\Services\MultipleRequestsService;
+use App\Services\OEmbedService;
 use App\Services\UsageService;
 use Illuminate\Console\Command;
 
@@ -38,7 +39,10 @@ class Embed extends Command
 //        $document = new DocumentService();
 //        $document->start();
 
-        $metas = new MetasService();
-        $metas->start();
+//        $metas = new MetasService();
+//        $metas->start();
+
+        $oembed = new OEmbedService();
+        $oembed->start();
     }
 }
