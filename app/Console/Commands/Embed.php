@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Services\DocumentService;
 use App\Services\MultipleRequestsService;
 use App\Services\UsageService;
 use Illuminate\Console\Command;
@@ -27,11 +28,13 @@ class Embed extends Command
      */
     public function handle()
     {
-        $usage = new UsageService();
+//        $usage = new UsageService();
 //        $usage->start();
 
+//        $multipleRequest = new MultipleRequestsService();
+//        $multipleRequest->start();
 
-        $multipleRequest = new MultipleRequestsService();
-        $multipleRequest->start();
+        $document = new DocumentService();
+        $document->start();
     }
 }
