@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Services\DocumentService;
+use App\Services\LinkedDataService;
 use App\Services\MetasService;
 use App\Services\MultipleRequestsService;
 use App\Services\OEmbedService;
@@ -42,7 +43,10 @@ class Embed extends Command
 //        $metas = new MetasService();
 //        $metas->start();
 
-        $oembed = new OEmbedService();
-        $oembed->start();
+//        $oembed = new OEmbedService();
+//        $oembed->start();
+
+        $linkedData = new LinkedDataService();
+        $linkedData->start();
     }
 }
