@@ -3,10 +3,12 @@
 namespace App\Console\Commands;
 
 use App\Services\DocumentService;
+use App\Services\ExtendingEmbed;
 use App\Services\LinkedDataService;
 use App\Services\MetasService;
 use App\Services\MultipleRequestsService;
 use App\Services\OEmbedService;
+use App\Services\OtherAPIService;
 use App\Services\UsageService;
 use Illuminate\Console\Command;
 
@@ -46,7 +48,15 @@ class Embed extends Command
 //        $oembed = new OEmbedService();
 //        $oembed->start();
 
-        $linkedData = new LinkedDataService();
-        $linkedData->start();
+//        $linkedData = new LinkedDataService();
+//        $linkedData->start();
+
+
+//        $extendingEmbed = new ExtendingEmbed();
+//        $extendingEmbed->start();
+
+        $api = new OtherAPIService();
+        $api->otherAPI();
+
     }
 }
